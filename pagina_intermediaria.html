@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>⚙️ Carregando...</title>
+    <link rel="icon" href="img/yay.png" type="img/yay.png">
+    <style>
+
+        /*CSS de elementos */
+        body {
+            background-image: url(img/back.png);
+            background-size:cover      
+        }
+
+        h1{
+            color:rgb(255, 255, 255);
+         
+        }
+
+        h2{
+            color:rgb(255, 255, 255);
+         }
+
+        p{
+            color:rgb(255, 255, 255);
+        }
+
+        h3{
+            color:rgb(255, 255, 255);
+        }
+
+        h4{
+            color:
+            rgb(255, 255, 255);
+        }
+        h5{
+            color:rgb(255, 255, 255);
+        }
+
+        h6{
+            color:rgb(255, 255, 255);
+        }
+
+        /* CSS dos icones e animações*/
+        @keyframes animation1 {
+                
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+       
+        @keyframes animation2 {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes zoom {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        #myImage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+        }
+
+        #myText {
+            text-align: center; /* Centraliza o texto */
+            color: rgb(255, 255, 255); /* Muda a cor do texto para vermelho */
+            font-size: 30px; /* Muda o tamanho da fonte para 20px */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif; /* Muda a fonte para Arial */
+            font-weight: bold; /* Deixa o texto em negrito */
+            animation: zoom 3s; /* Aplica a animação de zoom ao texto */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Adicione aqui o ícone ou qualquer outro conteúdo que você queira -->
+    <br><br>
+    <img id="myImage" alt="Pasta">
+    <br><br>
+    <p id="myText"></p>
+
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function() {
+             var animation = localStorage.getItem("animation");
+            var image = localStorage.getItem("image");
+            var text = localStorage.getItem("text");
+            var background = localStorage.getItem("background");
+
+        var myImage = document.getElementById("myImage");
+             myImage.style.animation = animation + " 2s";
+             myImage.src = image;
+
+        var myText = document.getElementById("myText");
+            myText.textContent = text;
+
+        // Defina a imagem de fundo do corpo para a imagem armazenada no LocalStorage
+            document.body.style.backgroundImage = "url('" + background + "')";
+    
+        // Adicione estas linhas para fazer a imagem de fundo cobrir toda a página
+            document.body.style.backgroundSize = "110%"; // Altere esta linha para dar zoom de 110%
+            document.body.style.backgroundRepeat = "no-repeat";
+        });
+
+
+
+        setTimeout(function() {
+            // Obtém o URL da página final do LocalStorage
+            var finalPageUrl = localStorage.getItem("finalPageUrl");
+
+            // Redireciona para a página final
+            window.location.href = finalPageUrl;
+        }, 2000);
+    </script>
+</body>
+</html>

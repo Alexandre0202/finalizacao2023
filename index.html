@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="Styles.css">
+    <title>Portal Bing</title>
+    <link rel="icon" href="img/yay.png" type="img/yay.png">
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+
+    
+    <style>
+      .navbar-custom {
+        background: linear-gradient(to right, rgba(161, 175, 255, 0.986), rgba(24, 39, 255, 0.863), rgba(198, 225, 255, 0.856), rgb(255, 255, 255));
+     }
+      
+      body {
+          background-image: url(img/back.png);
+          background-size:cover      
+      }
+
+      h1{
+        color:rgb(255, 255, 255);
+      }
+
+      h2{
+        color:rgb(255, 255, 255);
+      }
+      
+      p{
+        color:rgb(255, 255, 255);
+      }
+
+      h3{
+        color:rgb(255, 255, 255);
+      }
+
+      h4{
+        color:rgb(255, 255, 255);
+      }
+
+      h5{
+        color:rgb(255, 255, 255);
+      }
+
+      h6{
+        color:rgb(255, 255, 255);
+      }
+      h10{
+        color:rgb(255, 255, 255);
+      }
+
+      .navbar-brand {
+        color: white;
+        font-family: 'Comic Sans MS', cursive, bo;
+        }
+
+        img[src='img/lab.png'] {
+         border: 5px solid white;
+        }
+
+        footer{
+          background-color:rgb(70, 70, 70);
+        }
+
+        .footer .text-muted {
+        color: white;
+        }
+        
+        .nav-link {
+         color: rgb(255, 0, 0);
+        }
+
+        .navbar-brand {
+        color: rgb(255, 255, 255);
+        font-family: 'Comic Sans MS', cursive, bo;
+        }
+
+        .nav-link {
+         color: rgb(255, 255, 255);
+           font-family: "Comic Sans MS";
+        }
+
+        .offcanvas-title{
+          color: rgb(255, 255, 255);
+        }
+
+        .nav-link-custom {
+        color: white;
+        }
+        
+        .offcanvas {
+        background-color: rgba(26, 26, 26, 0.144);
+        backdrop-filter: blur(10px);
+        }
+
+        .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 20vh;
+        }
+
+        .footer {
+          margin-top:66%;
+          padding: 13px 0;
+          background: transparent;
+          backdrop-filter: blur(80px);
+        }
+
+        .footer-content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .small-button {
+          width: 140px;
+          background-color: rgba(120, 217, 255, 0.534);
+        }
+
+        .navbar-nav .nav-link {
+          color: white;
+          transition: color 0.3s, background-color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+          color: #888;
+          background-color: transparent;
+        }
+
+        .navbar-nav .nav-link:active {
+          background-color: #888;
+          color: white;
+        }
+
+        .navbar-brand {
+          color: white;
+          transition: color 0.3s, background-color 0.3s;
+        }
+
+        .navbar-brand:hover {
+          color: #bcf5ff;
+          background-color: transparent;
+        }
+
+        .navbar-brand:active {
+          background-color: #d6f0ffb2;
+          color: white;
+        }
+        
+        .navbar-nav .nav-link {
+          color: white;
+          transition: color 0.3s, background-color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+          color: #888;
+          background-color: transparent;
+        }
+
+        .navbar-nav .nav-link:active {
+          background-color: #888;
+          color: white;
+        }
+
+        .navbar-brand {
+          color: white;
+          transition: color 0.3s, background-color 0.3s;
+        } 
+
+        .navbar-brand:hover {
+          color: #bcf5ff;
+          background-color: transparent;
+        }
+
+        .navbar-brand:active {
+          background-color: #d6f0ffb2;
+          color: white;
+        }
+
+        .card {
+          width: 20rem;
+          background-color: transparent;
+          backdrop-filter: blur(90px);
+          border: 2px solid #ffffff5d;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          transition: transform .2s;
+          position: relative;
+        }
+
+        .card-body {
+          background-color: transparent;
+       }
+
+        .card:hover {
+          transform: scale(1.1); /* (Card 110% do tamanho original) */
+          z-index: 1;
+        }
+           
+    </style>
+
+
+  </head>
+  
+  <nav class="navbar navbar-custom fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/bing.png" alt="Logo" width="auto" height="31" class="d-inline-block align-text-top me-2">
+            <strong style="font-weight: bold;">Portal Bing</strong>
+        </a>
+
+        <div class="d-flex align-items-center">
+          <img src="img/sesi.png" width="auto" height="40" class="me-2">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
+      
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mais opções</h5>
+          <button type="button" class="btn-close btn-close-custom" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <h6><strong>Introdução</strong></h6>
+            <li class="nav-item">
+              <a class="nav-link" href="navegacao/introducao.html">🕝 Introdução da IA na Educação</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="navegacao/exemplos.html">⚙️ Exemplos da IA na educação</a>
+            </li>
+            <br><h6><strong> Desenvolvimento</strong></h6>
+            <li class="nav-item">
+              <a class="nav-link" href="navegacao/impacto.html">🔥 Impacto da IA na Educação</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="navegacao/futuronaia.html">🚀 Futuro da IA na Educação</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="navegacao/deficiencia.html">👩‍🦼 IA ajudando pessoas com Deficiência</a>
+            </li>
+            <br><h6><strong> Conclusão!</strong></h6>
+            <li class="nav-item">
+              <a class="nav-link" href="navegacao/iaeprofs.html">👨‍🏫 IA e a organização de alunos e professores</a>
+            </li>
+            <br><h6><strong> Confira! </strong></h6>
+            <li class="nav-item">
+              <a class="nav-link" href="navegacao/info.html">🗂️ Informações do Site</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">⬅️ Voltar para o Inicío</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <body>
+    <br><br><br><br>
+    <div class="container container-fluid">
+        <div class="text-center">
+            <h1>Bem-vindo(a) a Finalização da Equipe 1</h1>
+            <h6>☀️Bom Dia!</h6>
+            <p id="current-date"></p>
+        </div>
+
+        <br><br>
+        <div class="row">
+            <div class="col-md-9">
+                <h3><strong>Nós Iremos discutir sobre a IA dentro da Educação!</strong></h3>
+            </div>
+        </div>
+
+        <br>
+        
+        <div class="row">
+    <div class="col-md-12">
+        <h3><strong>📁 Escolha um tema!</strong></h3>
+        <br>
+    </div>
+    
+    <div class="col-md-4">
+    <div class="card" style="width: 20rem; margin-bottom: 20px;">
+        <div class="card-header" style="border-color: rgba(255, 255, 255, 0.637); ">
+            <h6>Introdução da IA na Educação</h6>
+        </div>
+        <div style="padding: 10px; border-radius: 6px; overflow: hidden;">
+            <img src="img/ianaedc.png" class="card-img-top" alt="../img">
+        </div>
+        <div class="card-body" style="text-align: justify;">
+            <p>Explore a revolução da educação pela IA com a plataforma ‘Letrus’, que aprimora as habilidades de redação dos estudantes do Colégio Sesi, oferecendo feedback instantâneo e personalizado</p>
+            <button id="myButton1" type="button" class="btn btn-primary" data-href="navegacao/introducao.html" data-animation="animation1" data-image="img/topico1.png" data-text="Vamos ver Introdução da IA na Educação" data-background="img/intro.png">✨Entar!</button>
+
+
+
+        </div>
+    </div>
+    </div>
+
+
+    <div class="col-md-4">
+    <div class="card" style="width: 20rem; margin-bottom: 20px;">
+        <div class="card-header" style="border-color: rgba(255, 255, 255, 0.637); ">
+            <h6>Exemplos da IA na educação</h6>
+        </div>
+        <div style="padding: 10px; border-radius: 6px; overflow: hidden;">
+            <img src="img/tiposdeia.png" class="card-img-top" alt="../img">
+        </div>
+        <div class="card-body" style="text-align: justify;">
+            <p>Aqui você irá conhecer vários exemplos de como a IA está sendo usada na educação, como o Bing, o Chat GPT, os chatbots, os algoritmos de avaliação,  IA para  desempenho acadêmico.</p>
+            <button id="myButton2" type="button" class="btn btn-primary" data-href="navegacao/exemplos.html" data-animation="animation2" data-image="img/chat.png" data-text="Vamos ver xemplos da IA na educação" data-background="img/jaenoite.png">✨Entar!</button>
+        </div>
+    </div>
+    </div>
+
+    <div class="col-md-4">
+    <div class="card" style="width: 20rem; margin-bottom: 20px;">
+        <div class="card-header" style="border-color: rgba(255, 255, 255, 0.637); ">
+            <h6>Impacto da IA na Educação</h6>
+        </div>
+        <div style="padding: 10px; border-radius: 6px; overflow: hidden;">
+            <img src="img/futurodaia.png" class="card-img-top" alt="../img">
+        </div>
+        <div class="card-body" style="text-align: justify;">
+            <p>Aqui você você vai descobrir o impacto da IA na educação, incluindo seus benefícios,  e os desafios, como a dependência tecnológica e a possível substituição do papel do educador. </p>
+            <button id="myButton3" type="button" class="btn btn-primary" data-href="navegacao/impacto.html" data-animation="animation2" data-image="img/escolafogo.png" data-text="Vamos ver o Impacto da IA na Educação" data-background="img/ia.png">✨Entar!</button>
+        </div>
+    </div>
+    </div>
+
+</div>
+<br>
+<div class="row">
+    
+    <div class="col-md-4">
+    <div class="card" style="width: 20rem; margin-bottom: 20px;">
+        <div class="card-header" style="border-color: rgba(255, 255, 255, 0.637); ">
+            <h6>Futuro da IA na Educação</h6>
+        </div>
+        <div style="padding: 10px; border-radius: 6px; overflow: hidden;">
+            <img src="img/impactosdaia.png" class="card-img-top" alt="../img">
+        </div>
+        <div class="card-body" style="text-align: justify;">
+            <p>Aqui você irá ver as tendências e os desafios da IA na educação, como a coordenação da interseção entre IA e humanos, a explicabilidade dos sistemas, o desenvolvimento de modelos de interação humano-IA.</p>
+            <button id="myButton4" type="button" class="btn btn-primary" data-href="navegacao/futuronaia.html" data-animation="animation2" data-image="img/futurudaia.png" data-text="Vamos ver o Futuro da IA na Educação" data-background="img/futuro.png">✨Entar!</button>
+        </div>
+    </div>
+    </div>
+
+    <div class="col-md-4">
+    <div class="card" style="width: 20rem; margin-bottom: 20px;">
+        <div class="card-header" style="border-color: rgba(255, 255, 255, 0.637); ">
+            <h6>IA ajudando pessoas com Deficiência</h6>
+        </div>
+        <div style="padding: 10px; border-radius: 6px; overflow: hidden;">
+            <img src="img/iaedeficientes.png" class="card-img-top" alt="../img">
+        </div>
+        <div class="card-body" style="text-align: justify;">
+            <p>Aqui você conhecer  como a IA pode ser uma ferramenta poderosa para auxiliar pessoas com deficiência na educação, proporcionando acesso a materiais didáticos personalizados e recursos de acessibilidade.</p>
+            <button id="myButton5" type="button" class="btn btn-primary" data-href="navegacao/deficiencia.html" data-animation="animation2" data-image="img/deficientes.png" data-text="VAmos ver a IA ajudando pessoas com Deficiência" data-background="img/def.png">✨Entar!</button>
+        </div>
+    </div>
+    </div>
+
+    <div class="col-md-4">
+    <div class="card" style="width: 20rem; margin-bottom: 20px;">
+        <div class="card-header" style="border-color: rgba(255, 255, 255, 0.637); ">
+            <h6>IA e a organização de alunos e professores</h6>
+        </div>
+        <div style="padding: 10px; border-radius: 6px; overflow: hidden;">
+            <img src="img/iaajudandoprofs.png" class="card-img-top" alt="../img">
+        </div>
+        <div class="card-body" style="text-align: justify;">
+            <p>Aqui você conhecer como a IA pode ser uma ferramenta inestimável para a organização pessoal e acadêmica dos alunos e para a elaboração de métodos de ensino para os professores e alunos.</p>
+            <button id="myButton6" type="button" class="btn btn-primary" data-href="navegacao/iaeprofs.html" data-animation="animation2" data-image="img/geraldo.png" data-text="Vamos ver a IA e a organização de alunos e professores"data-background="img/maquina.png">✨Entar!</button>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+
+
+  <script>
+    // Obter data atual
+    var date = new Date();
+
+    // Obter dia da semana
+    var dayNames = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+    var dayOfWeek = dayNames[date.getDay()];
+
+    // Obter mês com o dígito 0 adicionado se necessário
+    var month = date.getMonth() + 1;
+    if (month < 10) {
+        month = "0" + month;
+    }
+
+    // Atualizar data na página
+    document.getElementById("current-date").innerHTML =
+        "Hoje é " + dayOfWeek + ", dia " + date.getDate() + "\\" + month + "\\" + date.getFullYear();
+</script>
+
+  <footer class="footer">
+    <div class="footer-content">
+        <img src="img/yay.png" width="auto" height="32">
+        <h10>© 2023 Alexandre Augusto</h10>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll(".btn").forEach(function(button) {
+    button.addEventListener("click", function(event) {
+        event.preventDefault();
+        localStorage.setItem("finalPageUrl", this.getAttribute("data-href"));
+        localStorage.setItem("animation", this.getAttribute("data-animation"));
+        localStorage.setItem("image", this.getAttribute("data-image"));
+        localStorage.setItem("text", this.getAttribute("data-text"));
+        localStorage.setItem("background", this.getAttribute("data-background")); // Adicione esta linha
+        window.location.href = "pagina_intermediaria.html";
+    });
+});
+
+
+</script>
+
+</html>

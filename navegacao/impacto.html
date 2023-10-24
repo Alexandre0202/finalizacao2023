@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Impacto da IA na Educação</title>
+  <link rel="icon" href="../img/yay.png" type="../img/yay.png">
+  <link rel="stylesheet" href="Styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+  </script>
+  <style>
+    .navbar-custom {
+      background: linear-gradient(to right, rgba(71, 89, 124, 0.788), rgba(134, 93, 209, 0.863), rgba(110, 108, 206, 0.856), rgb(255, 255, 255));
+    }
+    body {
+      background-image: url(../img/aii.png);
+      background-size: cover;
+    }
+    h1, p, h3, h4, h5, h6, h10 {
+      color: rgb(255, 255, 255);
+    }
+    .navbar-brand {
+      color: white;
+      font-family: 'Comic Sans MS', cursive, bo;
+    }
+
+    footer {
+      background-color: rgb(70, 70, 70);
+    }
+    .footer .text-muted {
+      color: white;
+    }
+    .nav-link, .navbar-brand {
+      color: rgb(255, 255, 255);
+      font-family: 'Comic Sans MS';
+    }
+    .offcanvas-title {
+      color: rgb(255, 255, 255);
+    }
+    .nav-link-custom {
+      color: white;
+    }
+    .offcanvas {
+      background-color: rgba(26, 26, 26, 0.144);
+      backdrop-filter: blur(10px);
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      min-height: 20vh;
+    }
+    .footer {
+      margin-top: 20%;
+      padding: 13px 0;
+      background: transparent;
+      backdrop-filter: blur(70px);
+    }
+    .footer-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .navbar-nav .nav-link {
+      color: white;
+      transition: color 0.3s, background-color 0.3s;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #888;
+      background-color: transparent;
+    }
+    .navbar-nav .nav-link:active {
+      background-color: #888;
+      color: white;
+    }
+    .navbar-brand {
+      color: white;
+      transition: color 0.3s, background-color 0.3s;
+    }
+    .navbar-brand:hover {
+      color: #bcf5ff;
+      background-color: transparent;
+    }
+    .navbar-brand:active {
+      background-color: #d6f0ffb2;
+      color: white;
+    }
+    .card {
+      width: 20rem;
+      background-color: transparent;
+      backdrop-filter: blur(90px);
+      border: 2px solid #ffffff5d;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      transition: transform 0.2s;
+      position: relative;
+    }
+    .card-body {
+      background-color: transparent;
+    }
+    .card:hover {
+      transform: scale(1.1);
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<nav class="navbar navbar-custom fixed-top">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+          <img src="../img/bing.png" alt="Logo" width="auto" height="31" class="d-inline-block align-text-top me-2">
+          <strong style="font-weight: bold;">Portal Bing</strong>
+      </a>
+
+      <div class="d-flex align-items-center">
+        <img src="../img/sesi.png" width="auto" height="40" class="me-2">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mais opções</h5>
+        <button type="button" class="btn-close btn-close-custom" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <h6><strong>Introdução</strong></h6>
+          <li class="nav-item">
+            <a class="nav-link" href="introducao.html">🕝 Introdução da IA na Educação</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="exemplos.html">⚙️ Exemplos da IA na educação</a>
+          </li>
+          <br><h6><strong> Desenvolvimento</strong></h6>
+          <li class="nav-item">
+            <a class="nav-link" href="impacto.html">🔥 Impacto da IA na Educação</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="futuronaia.html">🚀 Futuro da IA na Educação</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="deficiencia.html">👩‍🦼 IA ajudando pessoas com Deficiência</a>
+          </li>
+          <br><h6><strong> Conclusão!</strong></h6>
+          <li class="nav-item">
+            <a class="nav-link" href="iaeprofs.html">👨‍🏫 IA e a organização de alunos e professores</a>
+          </li>
+          <br><h6><strong> Confira! </strong></h6>
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">🗂️ Informações do Site</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">⬅️ Voltar para o Inicío</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container container-fluid">
+    <div class="text-center">
+      <h1>🔥 Impacto da IA na Educação</h1>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="Texto" style="text-align: justify;">
+          <h4> Aqui nossa equipe irá discutir os benefícios e Desafios que a IA, está trazendo na educação.</h4>
+          <br>
+        </div>
+      </div>
+    </div>
+  
+    <br>
+    <div class="card" style="width: 20rem; margin-bottom: 10px;">
+      <div style="padding: 10px; border-radius: 6px; overflow: hidden; text-align: justify;">
+        <img src="../img/impactosdaia.png" class="card-img-top" alt="../img/letrus.png">
+      </div>
+    </div>
+    <br>
+    <div class="card common-card" style="width: 60rem; margin-bottom: 10px;">
+      <div class="row">
+        <div class="col-md-8">
+          <div style="padding: 10px; border-radius: 6px; overflow: hidden; text-align: justify;">
+            <h4><b>Personalização do Aprendizado:</b></h4>
+            <h6>A IA permite um aprendizado mais personalizado, adaptando-se ao ritmo e estilo de aprendizagem de cada aluno.</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card common-card" style="width: 60rem; margin-bottom: 10px;">
+          <div class="row">
+            <div class="col-md-8">
+              <div style="padding: 10px; border-radius: 6px; overflow: hidden; text-align: justify;">
+                <h4><b>Acesso 24/7:</b></h4>
+                <h6>Ferramentas de IA, como chatbots, podem fornecer suporte aos alunos 24 horas por dia, 7 dias por semana.</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card common-card" style="width: 60rem; margin-bottom: 10px;">
+          <div class="row">
+            <div class="col-md-8">
+              <div style="padding: 10px; border-radius: 6px; overflow: hidden; text-align: justify;">
+                <h4><b>Eficiência:</b></h4>
+                <h6>A IA pode automatizar tarefas administrativas, liberando tempo para os educadores se concentrarem no ensino.</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card common-card" style="width: 60rem; margin-bottom: 10px;">
+          <div class="row">
+            <div class="col-md-8">
+              <div style="padding: 10px; border-radius: 6px; overflow: hidden; text-align: justify;">
+                <h4><b>Privacidade de Dados:</b></h4>
+                <h6>Com a IA coletando e analisando grandes quantidades de dados dos alunos, surgem preocupações sobre a privacidade e segurança dos dados.</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card common-card" style="width: 60rem; margin-bottom: 10px;">
+          <div class="row">
+            <div class="col-md-8">
+              <div style="padding: 10px; border-radius: 6px; overflow: hidden; text-align: justify;">
+                <h4><b>Equidade no Acesso:</b></h4>
+                <h6>Nem todos os alunos têm acesso igual à tecnologia necessária para aproveitar as ferramentas de IA.</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card common-card" style="width: 60rem; margin-bottom: 10px;">
+          <div class="row">
+            <div class="col-md-8">
+              <div style="padding: 10px; border-radius: 6px; overflow: hidden; text-align: justify;">
+                <h4><b>Dependência Tecnológica:</b></h4>
+                <h6>Há o risco de que a dependência excessiva da tecnologia possa levar à diminuição das habilidades humanas essenciais, como a interação social e o pensamento crítico.</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card common-card" style="width: 60rem; margin-bottom: 10px;">
+          <div class="row">
+            <div class="col-md-8">
+              <div style="padding: 10px; border-radius: 6px; overflow: hidden; text-align: justify;">
+                <h4><b>Substituição do Papel do Educador:</b></h4>
+                <h6>Existe a preocupação de que a IA possa substituir os educadores. No entanto, é importante lembrar que a IA é uma ferramenta para auxiliar os educadores, não para substituí-los.</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <br><br>
+    <div style="display: flex; justify-content: space-between; background-color: #313131a1; padding: 10px; border-radius: 15px;">
+      <a href="exemplos.html" class="btn btn-danger" style="width: 45%;">⬅️ Voltar</a>
+      <a href="futuronaia.html" class="btn btn-success" style="width: 45%;">➡️ Próximo</a>
+  </div>
+
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  </body>
+  <footer class="footer">
+    <div class="footer-content">
+      <img src="../img/yay.png" width="auto" height="32">
+      <h10>© 2023 Alexandre Augusto</h10>
+    </div>
+  </footer>
+</html>
